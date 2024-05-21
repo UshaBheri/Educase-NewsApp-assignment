@@ -1,72 +1,72 @@
-import React from 'react';
-import {View,Text,StyleSheet,StatusBar,Image} from 'react-native';
-import Icon from './Icon';
-import {Linking} from 'react-native';
-
+import React from "react";
+import { View, Text, StyleSheet, StatusBar, Image } from "react-native";
+import Icon from "./Icon";
+import { Linking } from "react-native";
 const About = () => {
-    return(
-        <View style={StyleSheet.container}>
-            <Image style={StyleSheet.image} source={require("../assets/photo.jpg")} />
-            <Text style ={StyleSheet.text}>Bheri Usha</Text>
-            <Text style ={StyleSheet.info}>
-                Hello I am Usha, I have a Bachelor's Technology in Electronics and Communication Engineering.
-            </Text>
-            <View style={StyleSheet.icons}>
-                <Icon 
-                    onPress={() => Linking.openURL("email")}
-                    name={"email"}
-                    size={50}
-                />
-                <Icon 
-                    onPress={() => Linking.openURL("github")}
-                    name={"guthub"}
-                    backgroundColor="#ff4d4d"
-                    size={50}
-                />
-                <Icon 
-                    onPress={() => Linking.openURL("linkedIn")}
-                    name={"linkedIn"}
-                    size={50}
-                    backgroundColor="#ff4d4d"
-                />
-
-            </View>
-        </View>
-    );
+  return (
+    <View style={styles.container}>
+      <Image style={styles.image} source={require("../assets/photo.jpg")} />
+      <Text style={styles.text}>Usha Bheri</Text>
+      <Text style={styles.info}>
+        Hello I am Usha Bheri, I have bachelor's degree in Electronics and Communication engineering. Skilled in MERN Full Stack
+        development. Want to collabarate with me?? Feel free to contact!
+      </Text>
+      <View style={styles.icons}>
+        <Icon
+          backgroundColor="#ff4d4d"
+          onPress={() => Linking.openURL("mailto:bheriusha@gmail.com")}
+          name={"email"}
+          size={50}
+        />
+        <Icon
+          onPress={() => Linking.openURL("https://github.com/UshaBheri/Educase-NewsApp-assignment")}
+          backgroundColor="#ff4d4d"
+          name={"github"}
+          size={50}
+        />
+        <Icon
+          onPress={() =>
+            Linking.openURL("https://www.linkedin.com/in/bheri-usha/")
+          }
+          backgroundColor="#ff4d4d"
+          name={"linkedin"}
+          size={50}
+        />
+      </View>
+    </View>
+  );
 };
-
 const styles = StyleSheet.create({
-    container:{
-        paddingTop:StatusBar.currentHeight,
-        backgroundColor:'#ffcccc',
-        flex:1,
-        alignItems:'center',
-    },
-    text:{
-        fontSize:20,
-        marginVertical:5,
-        fontWeight:'bold',
-    },
-    icons:{
-        marginTop:50,
-        width:'100%',
-        margin:20,
-        flexDirection:'row',
-        justifyContent:'space-evenly',
-    },
-    info:{
-        marginHorizontal:15,
-        marginVertical:10,
-        fontSize:20,
-    },
-    image:{
-        height:200,
-        width:200,
-        borderRadius:100,
-        resizeMode:'cover',
-        borderColor:'#ff9999',
-        borderWidth:5,
-    },
+  container: {
+    paddingTop: StatusBar.currentHeight,
+    backgroundColor: "#ffcccc",
+    flex: 1,
+    alignItems: "center",
+  },
+  text: {
+    fontSize: 20,
+    marginVertical: 5,
+    fontWeight: "bold",
+  },
+  icons: {
+    marginTop: 50,
+    width: "60%",
+    margin: 20,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
+  info: {
+    marginHorizontal: 15,
+    marginVertical: 10,
+    fontSize: 20,
+  },
+  image: {
+    height: 200,
+    width: 200,
+    borderRadius: 100,
+    resizeMode: "cover",
+    borderColor: "#ff9999",
+    borderWidth: 5,
+  },
 });
-
 export default About;
